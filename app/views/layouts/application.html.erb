@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>KGarden32113</title>
+    <title>K_Garden</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,27 @@
   </head>
 
   <body>
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to "K_Garden", root_path %>
+          </div>
+          <%# ログインしているときは以下を表示するようにしましょう %>
+          <%# if user_signed_in? %>
+            <div class="nav__right">
+              <%= link_to "マイページ", "#", class: :nav__btn %>
+              <%= link_to "ログアウト", "#", class: :nav__logout, method: :delete %>
+            </div>
+          <%# else %>
+          <%# // ログインしているときは上記を表示するようにしましょう %>
+          <%# ログインしていないときは以下を表示するようにしましょう %>
+            
+          <%# end %>
+          <%# // ログインしていないときは上記を表示するようにしましょう %>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
