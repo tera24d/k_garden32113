@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  get 'events/index'
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
   root to: "events#index"
+
+  devise_scope :user do
+    post 'users/guest_sign_in', to: 'users/sessions#new_guest'
+  end
 end
