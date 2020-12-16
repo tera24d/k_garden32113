@@ -10,8 +10,9 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="inner">
+    <%#ヘッター%>
+    <div class="header_container">
+      <div class="headeer_wrapper">
         <div class="nav">
           <div class="nav__left">
             <%= link_to "K_Garden", root_path %>
@@ -34,7 +35,8 @@
           <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>
       </div>
-    </header>
+    </div>
+    <%#ヘッター%>
     <%= yield %>
   </body>
 </html>
