@@ -18,21 +18,25 @@
 - has_many :rooms, through: room_users
 - has_many :events
 - has_many :messages
+- belongs_to :sex
+- belongs_to :prefecture
 
 ## events テーブル
 
 | Column        | Type     | Options      |
 | ------------- | -------- | ------------ |
-| seed_date     | datetime | null: false  |
-| planting_date | datetime | null: false  |
-| harvest_date  | datetime | null: false  |
-| seeding_date  | datetime | null: false  |
+| seed_date     | datetime |              |
+| planting_date | datetime |              |
+| harvest_date  | datetime |              |
+| seeding_date  | datetime |              |
 | produce_id    | integer  | null: false  |
+| ridge_id      | integer  | null: false  |
 
 ### Association
 
 - belongs_to :user
-- 
+- belongs_to :produce
+- belongs_to :ridge
 
 ## relationships テーブル
 
