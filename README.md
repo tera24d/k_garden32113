@@ -23,14 +23,11 @@
 
 ## events テーブル
 
-| Column        | Type     | Options      |
-| ------------- | -------- | ------------ |
-| seed_date     | datetime |              |
-| planting_date | datetime |              |
-| harvest_date  | datetime |              |
-| seeding_date  | datetime |              |
-| produce_id    | integer  | null: false  |
-| ridge_id      | integer  | null: false  |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| user_id    | references | null: false, foreign_key: true |
+| produce_id | integer    | null: false                    |
+| ridge_id   | integer    | null: false                    |
 
 ### Association
 

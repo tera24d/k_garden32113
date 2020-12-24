@@ -1,0 +1,13 @@
+<%= form_with model: @event, url:events_path, local: true do |f| %>
+  <div class="event-box">
+    <span class="title">畝情報を入力する</span>
+    <div class="category">畝番号:
+      <%= f.collection_select(:ridge_id, Ridge.all, :id, :name, {}, {class:"select"}) %>
+    </div>
+    <div class="category">野菜名:
+      <%= f.collection_select(:produce_id, Produce.all, :id, :name, {}, {class:"select"}) %>
+    </div>
+    <%= f.text_area :content, class:"content", placeholder:"テキスト" %>
+    <%= f.submit "入力する" , class:"btn" %>
+  </div>
+<% end %>

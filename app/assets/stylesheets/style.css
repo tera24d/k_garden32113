@@ -10,6 +10,12 @@
   display: flex;
   justify-content: space-between;
 }
+
+.left_name {
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
@@ -51,6 +57,9 @@
   background-color: #FFFFFF;
   width: calc(100% - 300px);
 }
+.ridges {
+  display: flex;
+}
 
 /* メイン */
 .container {
@@ -76,10 +85,10 @@ th {
   background: #66FFFF;
   font-weight: bold;
 }
-caption {
+.main_ridge {
   text-align: center;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* アイコン */
@@ -104,4 +113,35 @@ caption {
 
 .purchase-btn-icon {
   width: 60%;
+}
+
+/* 畝入力画面 */
+.event-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.title {
+  font-size: 22px;
+}
+.select{
+  margin: 20px 0 0 10px;
+  height: 30px;
+  width: 300px;
+}
+.content {
+  margin-top: 20px;
+  height: 100px;
+  width: 500px;
+  resize:none;
+}
+.btn {
+  width: 200px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
 }
