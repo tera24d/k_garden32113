@@ -1,77 +1,147 @@
-/* リセットCSS */
-* {
-  box-sizing: border-box;
-}
-
-html,
-body,
-ul,
-li,
-h1,
-h2,
-p,
-div {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
-  color: #3b4043;
-}
-
-li {
-  list-style: none;
-}
-
-img {
-  max-width: 100%;
-  vertical-align: bottom;
-}
-
-a {
-  text-decoration: none;
-  color: #3b4043;
-}
-
 /* ヘッダー */
-.header {
+.header_container {
   background-color: #009966;
-  width: 100%;
-  padding: 20px 0;
+  padding: 1%;
 }
-.inner {
-  width: 95%;
-  margin: 0 auto;
+.header_wrapper {
+  width: 100%;
 }
 .nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
 }
+
+.left_name {
+  text-decoration: none;
+  font-size: 20px;
+}
+
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #0033CC;
   text-decoration: none;
   user-select: none;
-  border: 1px #87CEFA solid;
+  border: 1px #0033CC solid;
   border-radius: 3px;
   transition: 0.4s ease;
 }
 .nav__btn:hover{
   color: #fff;
-  background: #87CEFA;
+  background: #0033CC;
 }
 .nav__logout{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #0033CC;
   text-decoration: none;
   user-select: none;
 }
 .nav__logout:hover{
   opacity: 0.5;
+}
+
+/* サイドバー */
+.wrapper {
+  display: flex;
+}
+.side-bar {
+  background-color: #CCFFFF;
+  width: 300px;
+  min-height: 100vh;
+  padding-top: 10px;
+}
+.event {
+  background-color: #FFFFFF;
+  width: calc(100% - 300px);
+}
+.ridges {
+  display: flex;
+}
+
+/* メイン */
+.container {
+  overflow: scroll;
+}
+.group {
+  border: solid 3px #6091d3;
+  border-radius: 10px;
+  margin: 50px;
+  padding: 10px 50px 40px;
+}
+table , td, th {
+	border: 1px solid #595959;
+  border-collapse: collapse;
+  text-align: center;
+}
+td, th {
+	padding: 5px;
+	width: 200px;
+	height: 50px;
+}
+th {
+  background: #66FFFF;
+  font-weight: bold;
+}
+.main_ridge {
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* アイコン */
+.purchase-btn {
+  width: 120px;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 32px;
+  left: 32px;
+  position: fixed;
+  padding: 15px;
+}
+
+.purchase-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.purchase-btn-icon {
+  width: 60%;
+}
+
+/* 畝入力画面 */
+.event-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.title {
+  font-size: 22px;
+}
+.select{
+  margin: 20px 0 0 10px;
+  height: 30px;
+  width: 300px;
+}
+.content {
+  margin-top: 20px;
+  height: 100px;
+  width: 500px;
+  resize:none;
+}
+.btn {
+  width: 200px;
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid white;
+  background-color: orange;
+  color: white;
 }

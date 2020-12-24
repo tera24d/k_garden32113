@@ -1,0 +1,26 @@
+<div class="container">
+  <% @events.each do |event| %>
+    <div class="group">
+      <table align="center">
+        <tbody>
+          <div class= "main_ridge">畝番号：<%= event.ridge[:name] %></div>
+          <div class= "main_ridge">作物：<%= event.produce[:name] %></div>
+          <tr>
+            <th></th>
+            <th>種蒔き</th> 
+            <th>植え付け</th> 
+            <th>収穫</th> 
+            <th>採種</th>
+          </th>
+          <tr>
+            <th>目安時期</th> 
+            <td><%= event.produce[:seed_period]%></td>
+            <td><%= event.produce[:planting_period]%></td>
+            <td><%= event.produce[:harvest_period]%></td>
+            <td><%= event.produce[:seeding_period]%></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

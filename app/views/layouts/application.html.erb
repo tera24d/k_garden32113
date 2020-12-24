@@ -4,17 +4,18 @@
     <title>K_Garden</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="header">
-      <div class="inner">
+    <%#ヘッター%>
+    <div class="header_container">
+      <div class="headeer_wrapper">
         <div class="nav">
           <div class="nav__left">
-            <%= link_to "K_Garden", root_path %>
+            <%= link_to("K_Garden", root_path, class:"left_name") %>
           </div>
           <%# ログインしているときは以下を表示するようにしましょう %>
           <% if user_signed_in? %>
@@ -34,7 +35,8 @@
           <%# // ログインしていないときは上記を表示するようにしましょう %>
         </div>
       </div>
-    </header>
+    </div>
+    <%#ヘッター%>
     <%= yield %>
   </body>
 </html>
